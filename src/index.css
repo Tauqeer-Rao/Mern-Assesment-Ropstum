@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+  font-family: 'Cabinet Grotesk';
+  src: url('/src/assets/fonts/CabinetGrotesk-Variable.ttf') format('truetype');
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Frank Ruhl Libre';
+  src: url('/src/assets/fonts/FrankRuhlLibre-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+body {
+  font-family: 'Cabinet Grotesk', sans-serif;
+}
+
+/* default color combination */
+.base_color{
+  color: #49C7AB;
+}
+.secondary_color {
+  color: #1E293B
+}
+.description_color {
+  color: #475569;
+}
+
+/* overriding default antD class */
+.ant-card-body{
+  padding: 32px !important;
+}
+
+/* for scrolling featured icons */
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-scroll {
+  display: flex;
+  white-space: nowrap;
+  animation: scroll 20s linear infinite;
+  width: max-content;
+}
+
+
+path.path-hover {
+  fill: #49C7AB  !important;
+}
+
+path.path-hover:hover {
+  fill: #ffcc00 !important;
+  stroke: #000 !important;
+  stroke-width: 2px !important;
+  filter: drop-shadow(0px 0px 5px rgba(255, 204, 0, 0.7));
+  transition: all 0.3s ease;
+}
+
+
